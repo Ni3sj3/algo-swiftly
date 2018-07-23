@@ -10,6 +10,9 @@
 		02A40D5B2106011B00515F69 /* AlgoSwiftly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A40D512106011B00515F69 /* AlgoSwiftly.framework */; };
 		02A40D602106011B00515F69 /* AlgoSwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A40D5F2106011B00515F69 /* AlgoSwiftlyTests.swift */; };
 		02A40D622106011B00515F69 /* AlgoSwiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A40D542106011B00515F69 /* AlgoSwiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02A40D6D210601AF00515F69 /* ElementComparable+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A40D6C210601AF00515F69 /* ElementComparable+BinarySearch.swift */; };
+		02A40D6E210601AF00515F69 /* ElementComparable+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A40D6C210601AF00515F69 /* ElementComparable+BinarySearch.swift */; };
+		02A40D71210601F200515F69 /* ElementComparable+BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A40D70210601F200515F69 /* ElementComparable+BinarySearchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		02A40D5A2106011B00515F69 /* AlgoSwiftlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoSwiftlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A40D5F2106011B00515F69 /* AlgoSwiftlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoSwiftlyTests.swift; sourceTree = "<group>"; };
 		02A40D612106011B00515F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02A40D6C210601AF00515F69 /* ElementComparable+BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementComparable+BinarySearch.swift"; sourceTree = "<group>"; };
+		02A40D70210601F200515F69 /* ElementComparable+BinarySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementComparable+BinarySearchTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 		02A40D532106011B00515F69 /* AlgoSwiftly */ = {
 			isa = PBXGroup;
 			children = (
+				02A40D6B2106018400515F69 /* Array+Additions */,
 				02A40D542106011B00515F69 /* AlgoSwiftly.h */,
 				02A40D552106011B00515F69 /* Info.plist */,
 			);
@@ -80,10 +86,27 @@
 		02A40D5E2106011B00515F69 /* AlgoSwiftlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				02A40D6F210601D100515F69 /* Array+AdditionsTests */,
 				02A40D5F2106011B00515F69 /* AlgoSwiftlyTests.swift */,
 				02A40D612106011B00515F69 /* Info.plist */,
 			);
 			path = AlgoSwiftlyTests;
+			sourceTree = "<group>";
+		};
+		02A40D6B2106018400515F69 /* Array+Additions */ = {
+			isa = PBXGroup;
+			children = (
+				02A40D6C210601AF00515F69 /* ElementComparable+BinarySearch.swift */,
+			);
+			path = "Array+Additions";
+			sourceTree = "<group>";
+		};
+		02A40D6F210601D100515F69 /* Array+AdditionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				02A40D70210601F200515F69 /* ElementComparable+BinarySearchTests.swift */,
+			);
+			path = "Array+AdditionsTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					02A40D502106011B00515F69 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					02A40D592106011B00515F69 = {
 						CreatedOnToolsVersion = 9.4;
@@ -194,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A40D6D210601AF00515F69 /* ElementComparable+BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02A40D602106011B00515F69 /* AlgoSwiftlyTests.swift in Sources */,
+				02A40D71210601F200515F69 /* ElementComparable+BinarySearchTests.swift in Sources */,
+				02A40D6E210601AF00515F69 /* ElementComparable+BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +366,7 @@
 		02A40D662106011B00515F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.niesjedowell.AlgoSwiftly;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +393,7 @@
 		02A40D672106011B00515F69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +419,7 @@
 		02A40D692106011B00515F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T43VSC6T89;
 				INFOPLIST_FILE = AlgoSwiftlyTests/Info.plist;
@@ -407,6 +438,7 @@
 		02A40D6A2106011B00515F69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T43VSC6T89;
 				INFOPLIST_FILE = AlgoSwiftlyTests/Info.plist;
